@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import Member from './vd2';
+//import Car from './vd3';
+// import Product from './vd4';
+// import Baitap from './baitap';
+// import vdForm from './vdForm';
+import Form from './vdForm';
+import Score from './Score';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <Form /> */}
+    <Score />
   </React.StrictMode>
 );
 

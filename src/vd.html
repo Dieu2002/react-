@@ -1,0 +1,64 @@
+>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/stadalone/bable.min.js"></script>
+</head>
+
+<body>
+    <div id="member"></div>
+    <script type="text/label">
+        function Avatar(props){
+            return(
+                <div className="avatar">
+                    <img src={props.info.path} alt=""/>
+                </div>
+            )
+        }
+        function MemberInfo(props){
+            return(
+                <div className="info">
+                    <h2>{props.info.name}</h2>
+                    <p>Tuổi: {props.info.age}</p>
+                </div>
+            )
+        }
+        function Comment(props){
+            return (
+                <div className="comment">
+                    {props.text}
+                </div>
+            )
+        }
+        function Member(){
+            return (
+                <div className="member">
+                    <Avatar info={member.info}/>
+                    <MemberInfo info={member.info}/>
+                    <Comment text={member.text} />
+                </div>
+            )
+        }
+        const member={
+            text:'Lorem ipsum sit amet, consectetur adipiscing elit proin sit amet neque.',
+            info:{
+                path:'https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg',
+                name:'Nguyễn Văn A',
+                age:20
+            }
+        }
+        ReactDOM.render(
+            <Member/>,
+            document.getElementById('member')
+        );
+    </script>
+</body>
+
+</html>
