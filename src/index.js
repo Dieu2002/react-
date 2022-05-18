@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //mport './index.css';
-import './style.css';
+//import './style.css';
 import reportWebVitals from './reportWebVitals';
 
 import Score from './Component/Score';
 import Menu from './Component/Menu';
+import Filter from './Component/Filter';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Score />
-    <Menu />
+    {/* <Score /> */}
+    {/* <Menu /> */}
+    <Filter />
 
   </React.StrictMode>
 );
