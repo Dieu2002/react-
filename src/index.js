@@ -1,23 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+//mport './index.css';
+import './style.css';
 import reportWebVitals from './reportWebVitals';
-//import Member from './vd2';
-//import Car from './vd3';
-// import Product from './vd4';
-// import Baitap from './baitap';
-// import vdForm from './vdForm';
-import Form from './vdForm';
-import Score from './Score';
-import Menu from './Menu';
+
+import Score from './Component/Score';
+import Menu from './Component/Menu';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Form /> */}
-    {/* <Score /> */}
+
+    <Score />
     <Menu />
+
   </React.StrictMode>
 );
 

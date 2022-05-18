@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-export default class Menu extends Component {
+
+class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,17 +13,17 @@ export default class Menu extends Component {
     HandlerChage = (event) => {
         let key = event.target.name;
         let val = event.target.value
-        if (key == "drink") {
-            if (val == "Cà phê sữa") {
+        if (key === "drink") {
+            if (val === "Cà phê sữa") {
                 this.setState({ price: 12000 })
             }
-            else if (val == "Cà phê đá") {
+            else if (val === "Cà phê đá") {
                 this.setState({ price: 10000 })
             }
-            else if (val == "Sting dâu") {
+            else if (val === "Sting dâu") {
                 this.setState({ price: 8000 })
             }
-            else if (val == "Trà đá") {
+            else if (val === "Trà đá") {
                 this.setState({ price: 2000 })
             }
         }
@@ -36,32 +37,32 @@ export default class Menu extends Component {
 
     }
     CheckOrder = () => {
-        if (this.state.money == 0 || this.state.money < this.state.price) {
-            alert("Không đủ tiền");
+        if (this.state.money === 0 || this.state.money < this.state.price) {
+            alert("Số tiền của bạn không đủ");
         }
-        else if (this.state.drink == "") {
-            alert("Vui lòng chọn đồ uống khác?");
+        else if (this.state.drink === "") {
+            alert("Mời bạn chọn đồ uống.");
         }
         else alert("Đồ uống của bạn là: " + this.state.drink + " và số tiền dư là:  " + ((this.state.money) - (this.state.price)))
     }
     render() {
         return (
             <form onSubmit={this.HandlerSubmit} name="" method="" className="form1">
-                <table width={700} className="tbl">
+                <table width={700} className="tbl" >
                     <tbody><tr>
                         <td colSpan={2} id="td">Menu</td>
                     </tr>
                         <tr>
-                            <td id="tui">Cà phê sữa...........................12.000đ</td>
+                            <td id="tui" colspan="2">Cà phê sữa...........................12.000đ</td>
                         </tr>
                         <tr>
-                            <td id="tui">Cà phê đá.............................10.000đ</td>
+                            <td id="tui" colspan="2">Cà phê đá.............................10.000đ</td>
                         </tr>
                         <tr>
-                            <td id="tui">Sting dâu.............................8.000đ</td>
+                            <td id="tui" colspan="2">Sting dâu.............................8.000đ</td>
                         </tr>
                         <tr>
-                            <td id="tui">Trà đá.............................2.000đ</td>
+                            <td id="tui" colspan="2" size="20">Trà đá.............................2.000đ</td>
                         </tr>
                     </tbody></table>
                 <table width={700} className="tbl">
@@ -99,7 +100,7 @@ export default class Menu extends Component {
                         </tr>
                         <tr>
                             <td colSpan={2} align="center">
-                                <label><input type="submit" name="Submit" defaultValue="Đặt món" /></label>
+                                <label><input className='btn1' type="submit" name="Submit" id="submit" defaultValue="Đặt món" /></label>
                             </td>
                         </tr>
                     </tbody></table>
@@ -108,3 +109,4 @@ export default class Menu extends Component {
     }
 }
 
+export default Menu;

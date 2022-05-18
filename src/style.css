@@ -1,0 +1,16 @@
+.tbl{
+    margin-left: 300px;
+    text-align: center;
+    background-color: rgb(238, 206, 211);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #cars,#money{
+    
+    border-radius: 20px;
+  }
+  #submit{
+    width: 90px;
+    border-radius: 30px;
+    height: 29px ;
+  }
